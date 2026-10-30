@@ -31,7 +31,7 @@ Mots is the French sister site of [Verba](https://janavduraikkannan.github.io/ve
 
 One account works on every site. Your **account key, username, password, profile and saved AI key** are shared. Your **XP, levels, streaks, topics and course are separate for each language**, and each site has its own leaderboard. French progress is saved in its own part of the same account document (`fr`), so saving on one site never erases the others.
 
-The French leaderboard is the `boardfr` collection. Its security rules are in `firestore.rules` here; they have to be published to the shared Firebase project (verba-791ca) before the French leaderboard can save.
+The French leaderboard is the `boardfr` collection. Its security rules are in [`firestore.rules` in the linguae repository](https://github.com/janavduraikkannan/linguae/blob/main/firestore.rules); they have to be published to the shared Firebase project (verba-791ca) before the French leaderboard can save.
 
 ## How it works
 
@@ -40,10 +40,11 @@ Mots is a static website with no server and no build step, ready for GitHub Page
 | Path | What it is |
 | --- | --- |
 | `index.html` | The whole app: the French sentence engine, answer checker, interface and account code |
+| `js/usemode.js` | The identify-the-use tab: choosing which uses to drill, AI grading for typed uses, and "Mark my answer as correct". New features go in their own files like this one and are linked from `index.html` |
+| `css/usemode.css` | Styles for the identify-the-use tab |
 | `engine.js` | The French sentence engine on its own (the same code is inlined in `index.html`), for testing in Node |
 | `getkey.html` | Guide to getting a free Groq key |
 | `keys.html` | Every AI provider that works, with free limits |
-| `firestore.rules` | Security rules shared by every Linguae site, including the French leaderboard |
 | `img/felicien/` | Félicien, in every mood (drawn by `tools/rig.py` in the Linguae repository) |
 | `img/icons/` | Interface icons |
 | `media/` | The key tutorial video, its captions and poster |
