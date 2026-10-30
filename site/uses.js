@@ -1,7 +1,6 @@
 /* ---------- French: the rest of the course's form uses, for the identify-the-use tab ----------
-   Loaded after js/usemode.js. Each new use has a gen() that picks a sentence from the course's own
+   Loaded after js/usemode.js (the language name, LANG_NAME, is in site/config.js). Each new use has a gen() that picks a sentence from the course's own
    topic generators and tags the one verb that shows the use. */
-const LANG_NAME='French';
 const useAsk=ty=>`Which use of ${USES[ty.c].word} is`;
 const useOf=ty=>`use of ${USES[ty.c].word}`;
 const XC_SKIP=()=>false;

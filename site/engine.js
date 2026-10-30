@@ -1226,4 +1226,5 @@ function gradeEnglish(q,input){
   return[q.en,...(q.enAlt||[])].some(v=>normE(v)===u)?{ok:true}:{ok:false};
 }
 const latinOf=ts=>frJoin(ts);
-if(typeof module!=='undefined')module.exports={setLimit,makeBuilt,makeFocused,makeQuestion,TOPIC_PLAN,FRAMES,ING_ALL,TOPICS,B,grade,gradeLatin,gradeEnglish,idQuestion,USES,TYPES,VERBS,NOUNS,ADJ,vf,vphrase,finish,contract,frJoin,ID_TOPIC};
+if(typeof module!=='undefined'&&typeof window==='undefined')module.exports={setLimit,makeBuilt,makeFocused,makeQuestion,TOPIC_PLAN,FRAMES,ING_ALL,TOPICS,B,grade,gradeLatin,gradeEnglish,idQuestion,USES,TYPES,VERBS,NOUNS,ADJ,vf,vphrase,finish,contract,frJoin,ID_TOPIC};
+

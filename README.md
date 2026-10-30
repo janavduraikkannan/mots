@@ -39,20 +39,17 @@ Mots is a static website with no server and no build step, ready for GitHub Page
 
 | Path | What it is |
 | --- | --- |
-| `index.html` | The whole app: the French sentence engine, answer checker, interface and account code |
-| `js/usemode.js` | The identify-the-use tab, shared by every site: choosing which uses to drill (shaded when the class notes cover them), English or target-language sentences, AI grading for typed uses, and "Mark my answer as correct". New features go in their own files like this one and are linked from `index.html` |
-| `css/usemode.css` | Styles for the identify-the-use tab |
-| `js/moreuses.js` | This site's uses beyond the ones in the engine, so the identify-the-use tab covers every case or form use in the course |
-| `engine.js` | The French sentence engine on its own (the same code is inlined in `index.html`), for testing in Node |
-| `getkey.html` | Guide to getting a free Groq key |
-| `keys.html` | Every AI provider that works, with free limits |
+| `index.html`, `keys.html`, `getkey.html` | The pages. These are identical on every practice site; Mots's name, cat and wording are filled in from `site/config.js` |
+| `css/` | Styles, identical on every practice site (`main.css` for the app, `usemode.css` for the identify-the-use tab) |
+| `js/` | The app, identical on every practice site, one file per part: `core.js` (state and saving), `topics.js` (start screen), `ai.js` and `keys.js` (AI providers and keys), `onboarding.js`, `tutor.js` (asking Félicien), `drill.js` (each new sentence), `check.js` (checking answers), `progress.js` (XP and streaks), `sync.js` and `login.js` (accounts), `leaderboard.js`, `pages.js` (profile and ranks pages), `profile.js`, `identify.js` and `usemode.js` (the identify-the-use tab), `vocab.js`, `widgets.js`, `boot.js` (start-up), plus `head.js` and `site-fill.js` (put the site's own text into the pages) |
+| `site/` | Everything that is only Mots: `config.js` (names, wording, courses, ranks, profile pictures), `cat.js` (Félicien's personality and the AI prompts), `language.js` (how French behaves in the shared code: typing accents, charts, marking words), `engine.js` (the French sentence engine and answer checker), `uses.js` (extra uses for the identify-the-use tab) and `theme.css` (colours) |
+| Shared code | Changed in Verba first, then copied here with Verba's `tools/sync_shared.py`, so every site stays identical |
 | `img/felicien/` | Félicien, in every mood (drawn by `tools/rig.py` in the Linguae repository) |
 | `img/icons/` | Interface icons |
 | `media/` | The key tutorial video, its captions and poster |
-| `tools/make_mots.py` | The one-time conversion from Palabras' interface, kept for reference |
 | `tools/test_engine.js` | Generates thousands of sentences and checks that every model answer and accepted alternative grades as correct |
 
-To check the engine after changing it: `node tools/test_engine.js`. To rebuild `index.html` with a changed engine, replace the `<script id="engine">` block with the contents of `engine.js`.
+To check the engine after changing it: `node tools/test_engine.js` (it loads `site/engine.js`).
 
 ## Contributing and issues
 

@@ -1,0 +1,9 @@
+/* Mots's colours: the accent colours and level colours, light and dark. Everything else is in css/main.css. */
+:root{
+  --accent:#2D4D8F; --accent-ink:#FFF6E8; --accent-shadow:#16284F; --accent2:#B23A26; --accent2-ink:#FFFFFF; --brand:#26375F;
+  --lv1:#B8861B; --lv2:#2D5193; --lv3:#4E7A2E; --lv4:#8E3B4F; --lv5:#B23A26;
+}
+:root[data-theme="dark"]{
+  --accent:#8FB0E6; --accent-ink:#111A2C; --accent-shadow:#2D4D8F; --accent2:#E07A58; --accent2-ink:#1E1B17; --brand:#8FB0E6;
+  --lv1:#DDB25A; --lv2:#8FB0E6; --lv3:#9CC47F; --lv4:#D98B9C; --lv5:#E58A6E;
+}

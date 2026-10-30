@@ -1,4 +1,4 @@
-const E=require(require('path').join(__dirname,'..','engine.js'));
+const E=require(require('path').join(__dirname,'..','site','engine.js'));
 let n=0,bad=[],errs=0;const seen=new Set();
 for(const t of E.TOPICS){for(let i=0;i<60;i++){let q;try{q=E.makeQuestion(new Set([t.id]))}catch(e){errs++;if(errs<6)console.log('ERR',t.id,e.message);continue}
   n++;const fr=q.display;
