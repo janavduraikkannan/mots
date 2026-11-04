@@ -6,7 +6,7 @@ Part of **[Linguae](https://janavduraikkannan.github.io/linguae/)**, the home pa
 
 Mots is the French sister site of [Verba](https://janavduraikkannan.github.io/verba/) (Latin) and [Palabras](https://janavduraikkannan.github.io/palabras/) (Spanish). It builds fresh French sentences from the topics you pick, then has you translate the whole sentence, English to French or French to English. It checks your answer, tells you exactly what went wrong, and lets you ask Félicien, an AI tutor, questions about the grammar along the way.
 
-> **Privacy, in short:** Mots has no server of its own. Your practice runs in your browser, your AI key goes straight from your browser to the AI company you chose, and nothing is saved anywhere else unless you make an account. If you do, your account and anything you put on the leaderboard are stored with Google Firebase, are **not encrypted**, and **are not private**. Read the full [Privacy Statement](https://github.com/janavduraikkannan/Verba/blob/main/PRIVACY.md), shared by every Linguae site, before making an account.
+> **Privacy, in short:** Mots has no database server of its own. Your practice runs in your browser, and your AI requests and AI key go to the AI company you chose, through the Mots relay (a small Cloudflare Worker that saves nothing; you can switch it off), and nothing is saved anywhere else unless you make an account. If you do, your account and anything you put on the leaderboard are stored with Google Firebase, are **not encrypted**, and **are not private**. Read the full [Privacy Statement](https://github.com/janavduraikkannan/Verba/blob/main/PRIVACY.md), shared by every Linguae site, before making an account.
 
 ## What it does
 
