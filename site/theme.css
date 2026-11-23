@@ -1,3 +1,5 @@
+/* SPDX-License-Identifier: AGPL-3.0-or-later
+ * Copyright (C) 2026 janavduraikkannan and Linguae contributors */
 /* Mots's colours: the accent colours and level colours, light and dark. Everything else is in css/main.css. */
 :root{
   --accent:#2D4D8F; --accent-ink:#FFF6E8; --accent-shadow:#16284F; --accent2:#B23A26; --accent2-ink:#FFFFFF; --brand:#26375F;
